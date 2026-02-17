@@ -1,0 +1,99 @@
+@use 'variables' as v;
+
+body{
+    font-family: v.$fuente_principal;
+    background-color: v.$yellow;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    flex-direction: column;
+}
+
+.card{
+    background-color: v.$white;
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 8px 8px 0px #000;
+    width: 18rem;
+    height: 26rem;
+    
+
+    &--imagen{
+        width: auto;
+        height: 150px;
+        background-image: image-set(
+            url('../assets/images/illustration-article.svg') 1x
+        );
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 0 auto;
+        border-radius: 5%;
+    }
+
+    &--etiqueta{
+        display: inline-block;
+        padding: .5rem;
+        background-color: v.$yellow;
+        font-weight: v.$bold;
+        border-radius: 10px;
+        margin: 1rem 0 1rem 0 ;
+    }
+
+    &--fecha-publicacion{
+        font-size: .85rem;
+        font-weight: v.$regular;
+        margin: 0 0 1rem 0 ;
+        color: v.$gray950;
+    }
+
+    &--titulo{
+        font-weight: v.$bold;
+        margin: 0 0 1rem 0 ;
+        font-size: 1.5rem;
+
+        &:hover{
+            color: v.$yellow;
+            cursor: pointer;
+        }
+    }
+
+    &--descripcion{
+        color: v.$gray500;
+        font-size: 1rem;
+        margin: 0 0 1rem 0 ;
+    }
+
+    &--autor{
+
+        display: flex;
+        justify-content: left;  
+        align-items: center;
+
+        &-icono{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-image: image-set(
+                url('../assets/images/image-avatar.webp') 1x
+            );
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-right: 1rem;
+            border-radius: 5%;
+        }
+
+        &-nombre{
+            font-weight: v.$bold;
+            color: v.$gray950;
+        }
+    }
+   
+}
+
+.attribution{
+    margin-top: 1rem;
+}
